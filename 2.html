@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .container {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 10px;
+        height: 400px;
+        & .article {
+          grid-area: 1 / 4 / 3 / 6;
+        }
+        & div {
+          border-radius: 1rem;
+          & img {
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+            border-radius: 1rem;
+         }
+        }
+        & .article {
+          background-color: #f1f1f1;
+          padding: 20px;
+          text-align: center;
+        }
+      }
+
+      .bento-container {
+        max-width: 500px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px;
+        height: 400px;
+        & div {
+          width: 100%;
+          height: 100%;
+          background-color: #f1f1f1;
+          border-radius: 0.5rem;
+          & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0.5rem;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    
+      <div class="container">
+        <div class="article">
+          <h2>Lorem, ipsum dolor.</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. In accusamus
+            dolore obcaecati fugit repellendus voluptas eos, nemo maxime saepe,
+            amet quia iste placeat unde recusandae magnam assumenda facilis rerum
+            nam minus, voluptatibus rem cum laborum libero. Iusto error aspernatur
+            aliquid deserunt? Quo fugit dolorum necessitatibus facere soluta
+            tempora aut voluptates!
+          </p>
+        </div>
+        <div><img src="images/1.jpeg" alt=""></div>
+        <div><img src="images/2.jpeg" alt=""></div>
+        <div><img src="images/3.jpeg" alt=""></div>
+        <div><img src="images/4.jpeg" alt=""></div>
+        <div><img src="images/5.jpeg" alt=""></div>
+        <div><img src="images/6.jpeg" alt=""></div>
+        <div><img src="images/7.jpeg" alt=""></div>
+        <div><img src="images/8.jpeg" alt=""></div>
+        <div><img src="images/9.jpeg" alt=""></div>
+        <div><img src="images/10.jpeg" alt=""></div>
+        <div><img src="images/11.jpeg" alt=""></div>
+        <div><img src="images/12.jpeg" alt=""></div>
+      </div>
+
+  <div class="bento-container">
+    <div style="grid-row:1/3"><img src="images/1.jpeg" alt=""></div>
+    <div style="grid-column:2/4"><img src="images/2.jpeg" alt=""></div>
+    <div><img src="images/3.jpeg" alt=""></div>
+    <div><img src="images/4.jpeg" alt=""></div>
+  </div>
+  </body>
+</html>
