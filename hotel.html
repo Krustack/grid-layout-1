@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 80px 1fr 80px;
+        max-height: 100dvh;
+      }
+      nav,
+      footer {
+        grid-column: 1 / -1;
+        text-transform: uppercase;
+        padding: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        background-color: #151855;
+        color: white;
+      }
+      aside {
+        background-color: #f0f0f0;
+        padding: 20px;
+        font-size: 16px;
+        font-weight: bold;
+        & ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          & li {
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            &:hover {
+              background-color: #7b87e1;
+            }
+          }
+        }
+      }
+      main {
+        padding: 20px;
+        background-color: #f0f0f0;
+        overflow: auto;
+        & h1 {
+          font-size: 30px;
+          margin-bottom: 20px;
+        }
+        & h2 {
+          font-size: 24px;
+          margin-bottom: 10px;
+        }
+      }
+      .rooms {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: 100%;
+      }
+      .room {
+        display: flex;
+        gap: 20px;
+        background-color: #e2e2e2;
+        border-radius: 5px;
+        & div {
+          width: 200px;
+          border-radius: 5px;
+          & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+          }
+        }
+        & article {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          & h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+          }
+          & p {
+            font-size: 16px;
+            margin-bottom: 10px;
+          }
+          & .booking {
+            padding: 10px 20px;
+            background-color: #7b87e1;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            &:hover {
+              background-color: #5a6bbf;
+            }
+          }
+          & .fev {
+            padding: 10px 20px;
+            background-color: #ccc;
+            color: #151855;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>🏨 the new hotel</nav>
+    <aside>
+      <ul>
+        <li>🏠 Home</li>
+        <li>🧾 Booking</li>
+        <li>📞 Contact</li>
+      </ul>
+    </aside>
+    <main>
+      <h1>Welcome to the new hotel</h1>
+      <ul class="rooms">
+        <li class="room">
+          <div>
+            <img src="images/1.jpeg" alt="" />
+          </div>
+          <article>
+            <h3>Room 1</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              voluptatibus.
+            </p>
+            price: 100$
+            <div>
+              <button class="booking">Book Now</button>
+              <button class="fev">❤️</button>
+            </div>
+          </article>
+        </li>
+        <li class="room">
+          <div>
+            <img src="images/1.jpeg" alt="" />
+          </div>
+          <article>
+            <h3>Room 1</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              voluptatibus.
+            </p>
+            price: 100$
+            <div>
+              <button class="booking">Book Now</button>
+              <button class="fev">❤️</button>
+            </div>
+          </article>
+        </li>
+        <li class="room">
+          <div>
+            <img src="images/1.jpeg" alt="" />
+          </div>
+          <article>
+            <h3>Room 1</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              voluptatibus.
+            </p>
+            price: 100$
+            <div>
+              <button class="booking">Book Now</button>
+              <button class="fev">❤️</button>
+            </div>
+          </article>
+        </li>
+        <li class="room">
+          <div>
+            <img src="images/1.jpeg" alt="" />
+          </div>
+          <article>
+            <h3>Room 1</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              voluptatibus.
+            </p>
+            price: 100$
+            <div>
+              <button class="booking">Book Now</button>
+              <button class="fev">❤️</button>
+            </div>
+          </article>
+        </li>
+        <li class="room">
+          <div>
+            <img src="images/1.jpeg" alt="" />
+          </div>
+          <article>
+            <h3>Room 1</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              voluptatibus.
+            </p>
+            price: 100$
+            <div>
+              <button class="booking">Book Now</button>
+              <button class="fev">❤️</button>
+            </div>
+          </article>
+        </li>
+        <li class="room">
+          <div>
+            <img src="images/1.jpeg" alt="" />
+          </div>
+          <article>
+            <h3>Room 1</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              voluptatibus.
+            </p>
+            price: 100$
+            <div>
+              <button class="booking">Book Now</button>
+              <button class="fev">❤️</button>
+            </div>
+          </article>
+        </li>
+        <li class="room">
+          <div>
+            <img src="images/1.jpeg" alt="" />
+          </div>
+          <article>
+            <h3>Room 1</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              voluptatibus.
+            </p>
+            price: 100$
+            <div>
+              <button class="booking">Book Now</button>
+              <button class="fev">❤️</button>
+            </div>
+          </article>
+        </li>
+        <li class="room">
+          <div>
+            <img src="images/1.jpeg" alt="" />
+          </div>
+          <article>
+            <h3>Room 1</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              voluptatibus.
+            </p>
+            price: 100$
+            <div>
+              <button class="booking">Book Now</button>
+              <button class="fev">❤️</button>
+            </div>
+          </article>
+        </li>
+        <li class="room">
+          <div>
+            <img src="images/1.jpeg" alt="" />
+          </div>
+          <article>
+            <h3>Room 1</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              voluptatibus.
+            </p>
+            price: 100$
+            <div>
+              <button class="booking">Book Now</button>
+              <button class="fev">❤️</button>
+            </div>
+          </article>
+        </li>
+        <li class="room">
+          <div>
+            <img src="images/1.jpeg" alt="" />
+          </div>
+          <article>
+            <h3>Room 1</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              voluptatibus.
+            </p>
+            price: 100$
+            <div>
+              <button class="booking">Book Now</button>
+              <button class="fev">❤️</button>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </main>
+    <footer>©copy right the new hotel 2025</footer>
+  </body>
+</html>
