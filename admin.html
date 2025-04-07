@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 80px 1fr;
+        grid-template-rows: 80px 1fr 80px;
+        height: 100dvh;
+        gap: 20px;
+      }
+      header,
+      footer {
+        grid-column: 1 / -1;
+        text-transform: uppercase;
+        padding: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        background-color: #151855;
+        color: white;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 1rem;
+        & nav {
+          margin-right: auto;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          & ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+            & li {
+              cursor: pointer;
+              transition: background-color 0.3s;
+              &:hover {
+                background-color: #7b87e1;
+              }
+            }
+          }
+        }
+      }
+      .profile {
+        & img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+      .search {
+        & input {
+          padding: 4px;
+          border: 1px solid #ccc;
+          border-radius: 32px;
+          transition: border-color 0.3s;
+          &:focus {
+            border-color: #7b87e1;
+            outline: none;
+          }
+        }
+      }
+      aside {
+        padding: 20px;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: #f9f9f9;
+        & ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          & li {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            transition: background-color 0.3s;
+            &:hover {
+              background-color: #7b87e1;
+            }
+          }
+        }
+      }
+      main {
+        min-height: 100%;
+        padding: 20px;
+        display: flex;
+        .avatar {
+          display: flex;
+          border: #ccc 1px solid;
+          border-radius: 5px;
+          padding: 10px;
+          align-items: center;
+          height: 200px;
+          width: 500px;
+          gap: 20px;
+          & img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+        }
+        .employee {
+          overflow-y: scroll;
+          width: 100%;
+          margin-left: 20px;
+          background-color: #f0f0f0;
+          padding: 20px;
+          border-radius: 5px;
+          & h1 {
+            font-size: 30px;
+            margin-bottom: 20px;
+          }
+          & ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            & li {
+              display: flex;
+              gap: 20px;
+              justify-content: start;
+              padding: 10px;
+              background-color: #fff;
+              border-radius: 5px;
+              border: 1px solid #ccc;
+              transition: background-color 0.3s;
+              &:hover {
+                background-color: #7b87e1;
+              }
+              & span {
+                flex: 1;
+                text-align: left;
+                &:last-child {
+                  flex: 0.25;
+                  margin-left: auto;
+                }
+                &:first-child {
+                  flex: 0.1;
+                }
+              }
+            }
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+        </nav>
+        <div class="search">
+          <input type="text" placeholder="Search" />
+        </div>
+        <div class="profile">
+          <img src="images/man.png" alt="Profile" />
+        </div>
+      </header>
+      <aside>
+        <ul>
+          <li>🏠</li>
+          <li>🧾</li>
+          <li>📞</li>
+          <li>🏨</li>
+          <li>🍽️</li>
+          <li>🛌</li>
+          <li>🏊‍♂️</li>
+          <li>💪</li>
+          <li>🧖‍♀️</li>
+        </ul>
+      </aside>
+      <main>
+        <div class="avatar">
+          <img src="images/man.png" alt="avatar" />
+          <div>
+            <h3>Wisanu</h3>
+            <h3>role:admin</h3>
+          </div>
+        </div>
+        <div class="employee">
+          <h1>employee suport</h1>
+          <ul>
+            <li><span>No.</span><span>name</span><span>role</span></li>
+            <li>
+              <span>1</span><span>Lorem, ipsum dolor.</span><span>clerk</span>
+            </li>
+            <li>
+              <span>1</span><span>Lorem, ipsum dolor.</span><span>clerk</span>
+            </li>
+
+            <li>
+              <span>1</span><span>Lorem, ipsum dolor.</span><span>clerk</span>
+            </li>
+            <li>
+              <span>1</span><span>Lorem, ipsum dolor.</span><span>clerk</span>
+            </li>
+            <li>
+              <span>1</span><span>Lorem, ipsum dolor.</span><span>clerk</span>
+            </li>
+            <li>
+              <span>1</span><span>Lorem, ipsum dolor.</span><span>clerk</span>
+            </li>
+            <li>
+              <span>1</span><span>Lorem, ipsum dolor.</span><span>clerk</span>
+            </li>
+            <li>
+              <span>1</span><span>Lorem, ipsum dolor.</span><span>clerk</span>
+            </li>
+            <li>
+              <span>1</span><span>Lorem, ipsum dolor.</span><span>clerk</span>
+            </li>
+            <li>
+              <span>1</span><span>Lorem, ipsum dolor.</span><span>clerk</span>
+            </li>
+            <li>
+              <span>1</span><span>Lorem, ipsum dolor.</span><span>clerk</span>
+            </li>
+            <li>
+              <span>1</span><span>Lorem, ipsum dolor.</span><span>clerk</span>
+            </li>
+            <li>
+              <span>1</span><span>Lorem, ipsum dolor.</span><span>clerk</span>
+            </li>
+            <li>
+              <span>1</span><span>Lorem, ipsum dolor.</span><span>clerk</span>
+            </li>
+            <li>
+              <span>1</span><span>Lorem, ipsum dolor.</span><span>clerk</span>
+            </li>
+            <li>
+              <span>1</span><span>Lorem, ipsum dolor.</span><span>clerk</span>
+            </li>
+            <li>
+              <span>1</span><span>Lorem, ipsum dolor.</span><span>clerk</span>
+            </li>
+            <li>
+              <span>1</span><span>Lorem, ipsum dolor.</span><span>clerk</span>
+            </li>
+            <li>
+              <span>1</span><span>Lorem, ipsum dolor.</span><span>clerk</span>
+            </li>
+            <li>
+              <span>1</span><span>Lorem, ipsum dolor.</span><span>clerk</span>
+            </li>
+            <li>
+              <span>1</span><span>Lorem, ipsum dolor.</span><span>clerk</span>
+            </li>
+            <li>
+              <span>1</span><span>Lorem, ipsum dolor.</span><span>clerk</span>
+            </li>
+            <li>
+              <span>1</span><span>Lorem, ipsum dolor.</span><span>clerk</span>
+            </li>
+          </ul>
+        </div>
+      </main>
+
+      <footer>© Wisanu</footer>
+    </div>
+  </body>
+</html>
