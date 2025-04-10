@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #ded5f2;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 80px 1fr;
+        grid-template-rows: 50px 1fr 80px;
+        height: 100vh;
+        gap: 20px;
+      }
+      header,
+      footer {
+        grid-column: 1 / -1;
+        text-transform: uppercase;
+        font-size: 0.5rem;
+        font-weight: bold;
+        color: white;
+        & h1 {
+          padding: 1rem 2rem;
+          background-color: #7e55d9;
+          border-radius: 50px;
+          margin: 0.5rem 2rem;
+        }
+      }
+      aside {
+        background-color: #8771d9;
+        margin-left: 1rem;
+        border-radius: 0.25rem;
+        & ul {
+          list-style: none;
+          padding: 1rem;
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          gap: 20px;
+          & li {
+            cursor: pointer;
+            transition: background-color 0.3s;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            border: 2px solid #9b8abf;
+            &:hover {
+              background-color: #8469bf;
+            }
+          }
+        }
+      }
+      .main-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        padding: 1rem;
+        border-radius: 0.25rem;
+      }
+      .news {
+        background-color: #8771d9;
+        flex: 1;
+        color: white;
+        padding: 1rem;
+        border-radius: 0.25rem;
+        & ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          margin-top: 0.5rem;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          & li {
+            cursor: pointer;
+            transition: background-color 0.3s;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            border-bottom: #9b8abf 1px dashed;
+          }
+        }
+      }
+      .main-button {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        flex: 1;
+        & button {
+          aspect-ratio: 1;
+          cursor: pointer;
+          padding: 0.5rem 1rem;
+          border-radius: 0.25rem;
+          border: none;
+          background-color: #8771d9;
+          color: white;
+          transition: background-color 0.3s;
+          &:hover {
+            background-color: #8469bf;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>LOGO</h1>
+      </header>
+      <aside>
+        <nav>
+          <ul>
+            <li>D</li>
+            <li>S</li>
+            <li>P</li>
+          </ul>
+        </nav>
+      </aside>
+      <main>
+        <h2>Welcome to the Admin Panel</h2>
+        <div class="main-container">
+          <div class="news">
+            <h3>NEWS</h3>
+            <ul>
+              <li>News 1</li>
+              <li>News 2</li>
+              <li>News 3</li>
+              <li>News 4</li>
+              <li>News 5</li>
+              <li>News 6</li>
+            </ul>
+          </div>
+          <div class="main-button">
+            <button>Button 1</button>
+            <button>Button 2</button>
+            <button>Button 3</button>
+            <button>Button 4</button>
+            <button>Button 5</button>
+            <button>Button 6</button>
+            <button>Button 7</button>
+            <button>Button 8</button>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <h1>&copy; 2023 Your Company</h1>
+      </footer>
+    </div>
+  </body>
+</html>
